@@ -1,0 +1,89 @@
+\let\nofiles\relax % This is because res says to not emit aux files,
+                   % but lastpage needs aux files.
+\documentclass[margin,line, roman]{res}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{fourier-orns}
+\usepackage{amsmath,amssymb}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{etaremune}
+\usepackage{fontawesome}
+\usepackage[normalem]{ulem}
+\usepackage[style=iso]{datetime2}
+
+\DeclareFontFamily{U}{fontawesomeOne}{}
+\DeclareFontShape{U}{fontawesomeOne}{m}{n}
+{<-> FontAwesome--fontawesomeone}{}
+\DeclareRobustCommand\FAone{\fontencoding{U}\fontfamily{fontawesomeOne}\selectfont} 
+
+
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\voffset -25pt
+%\topmargin -.2in
+\headsep 25pt
+\textwidth=6.0in
+\textheight=8.9in
+\itemsep=0in
+\parsep=0in
+
+% Headings
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+\newcommand{\myname}{Kieran Byrne}
+\newlength{\mynamewidth}
+\settowidth{\mynamewidth}{\namefont\myname}
+
+\name{\hspace*{0.5\textwidth}\hspace{-0.5\mynamewidth} \myname \vspace*{.1in}}
+% On the first page, have no header.
+\thispagestyle{empty}
+
+\begin{resume}
+
+%\input{ContactContent.tex}
+
+% \section{\sc Citizenship}
+% United States
+
+\section{\sc Education}
+{\bf MRes Economics,} Queen Mary University of London \hfill {\bf 2023}\\
+\vspace*{-.2in}
+
+{\bf MSc Economics,} London School of Economics \& Political Science (w. distinction) \hfill {\bf 2018}\\
+\vspace*{-.2in}
+
+{\bf BSc Economics \& Finance,} University College Dublin (w. $1^{\text{st}}$ class honours) \hfill {\bf 2016}\\
+\vspace*{-.2in}
+
+\section{\sc Employment}
+
+
+
+% Added to improve page breaks
+\vspace{-1em}
+
+
+
+\end{resume}
+
+
+
+
+
+\end{document}
+
+% Local Variables:
+% mode: latex
+% End:
